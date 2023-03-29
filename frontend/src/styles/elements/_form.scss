@@ -1,0 +1,48 @@
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  input,
+  label,
+  textarea,
+  fieldset,
+  p {
+    color: $secondaryContrast;
+  }
+
+  p {
+    margin: 3px 0 0;
+  }
+
+  input,
+  textarea,
+  fieldset {
+    border-color: $secondaryContrast;
+  }
+
+  .customInput {
+    .MuiInputBase-root:hover {
+      fieldset {
+        border-color: $primaryMain;
+      }
+    }
+    input {
+      color-scheme: dark;
+      &:hover {
+      }
+    }
+    input:autofill,
+    input:autofill:focus input:-internal-autofill-selected,
+    input:-internal-autofill-selected:focus,
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+      background-color: $secondaryMain !important;
+      background-image: none !important;
+      color: $secondaryContrast !important;
+    }
+  }
+}

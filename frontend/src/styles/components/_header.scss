@@ -1,0 +1,27 @@
+.header {
+  padding: 1rem 0;
+
+  .profileLink {
+    padding: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+
+    svg {
+      @include pxToRem(32);
+    }
+
+    ~ .header__title {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 64px);
+      padding-right: 64px;
+    }
+  }
+
+  &__title {
+    font-family: "thirsty_capsregular", Impact, "Arial Black", sans-serif;
+    margin: 0;
+    @include pxToRem(64);
+    text-align: center;
+  }
+}

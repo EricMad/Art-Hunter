@@ -1,0 +1,32 @@
+// COLORS
+$primaryLight: #fed154; // soft yellow
+$primaryMain: #f4b301; // yellow
+$primaryDark: #f5a302; // dark yellow
+$primaryContrast: #1e2329; // grey text on yellow
+$secondaryLight: #3b4046; // soft grey
+$secondaryMain: #2a2f35; // grey
+$secondaryDark: #1e2329; // dark grey
+$secondaryContrast: whitesmoke; // white text on grey
+$customMain: #5aaa95; // green-blue
+$customContrast: #1e2329; // grey text on green blue
+
+// FONTS
+$fontTitle: "thirsty_capsregular", Georgia, Helvetica, sans-serif !default;
+$fontText: "Roboto", Arial, Helvetica, sans-serif !default;
+
+// TEXT AND TITLE SIZE
+$textXS: 1rem; // 16px
+$textSM: 1.25rem; // 20px
+$textMD: 1.5rem; // 24px
+$textLG: 2rem; // 32px
+$textXL: 3rem; // 48px
+$textXXL: 4rem; // 64px
+
+// SIZES
+$mainHeight: calc(100dvh - 106px);
+// $mainWidthNavHeight: calc(100dvh - 172px);
+// Display compromise between IOS and ANDROID devices (remplace previous line) :
+$mainWidthNavHeight: calc(100vh - 270px);
+$captureInMainHeight: calc(100% - 102px);
+$pictureInMainHeight: calc(100% - 134px);
+// $captureInMainWidth: calc($captureInMainHeight / 4 * 3);

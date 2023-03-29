@@ -1,0 +1,24 @@
+.bottomNav {
+  display: flex;
+  position: fixed;
+  max-width: 800px;
+  justify-content: space-around;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  border-top: 1px solid $secondaryContrast;
+  background-color: $secondaryMain;
+
+  .iconLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.75rem;
+    span {
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+    }
+  }
+}

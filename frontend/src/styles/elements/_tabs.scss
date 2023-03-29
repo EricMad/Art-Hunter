@@ -1,0 +1,61 @@
+.tabs {
+  padding: 0 1rem;
+
+  .tab {
+    &:not(.Mui-selected) {
+      color: $secondaryContrast;
+    }
+
+    &:not(:first-child) {
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 1rem;
+        width: 1px;
+        position: absolute;
+        background-color: whitesmoke;
+        z-index: 1;
+        top: 1rem;
+        left: 0;
+      }
+    }
+  }
+}
+
+.panel {
+  background-color: $secondaryMain;
+  padding: 1rem;
+
+  .personnalScores {
+    display: flex;
+    margin-top: 0.5rem;
+    background-color: $primaryMain;
+    color: $primaryContrast;
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+      0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+    &__column {
+      text-align: center;
+      padding: 0.375rem 1rem;
+      &:nth-child(1) {
+        width: 19.3%;
+      }
+      &:nth-child(2) {
+        width: 38.4%;
+      }
+      &:nth-child(3) {
+        width: 21.8%;
+      }
+      &:nth-child(4) {
+        width: 20.5%;
+      }
+    }
+    &__infoBold {
+      font-weight: bold;
+    }
+  }
+}

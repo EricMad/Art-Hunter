@@ -1,0 +1,35 @@
+.gallery {
+  .main {
+    padding-bottom: 67px;
+  }
+  .panel {
+    max-height: calc(100dvh - 219px);
+    overflow-y: auto;
+  }
+  .cardList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 2.2rem;
+  }
+  .card {
+    grid-column: span 1;
+    width: 100%;
+    border-bottom: 1rem;
+    font-size: 0.9rem;
+    p {
+      padding-top: 0.1rem;
+    }
+    &__title,
+    &__score {
+      color: $primaryMain;
+    }
+    &__txtBold {
+      font-weight: bold;
+    }
+    &__image {
+      width: 100%;
+      margin-bottom: 0.3rem;
+    }
+  }
+}

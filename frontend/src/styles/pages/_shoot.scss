@@ -1,0 +1,146 @@
+.shoot {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+    height: $mainWidthNavHeight;
+    max-height: $mainWidthNavHeight;
+    text-align: center;
+    position: relative;
+  }
+
+  .frameWrapper {
+    padding: 1rem;
+    height: $captureInMainHeight;
+  }
+
+  .validatorWrapper {
+    padding: 0 1rem 1rem;
+    height: $pictureInMainHeight;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .frame,
+  .picture {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: $secondaryLight;
+  }
+
+  @keyframes patchScore {
+    from {
+      top: 0;
+      left: 0;
+      transform: rotate(-16deg);
+      opacity: 0;
+    }
+    to {
+      top: 15%;
+      left: 10%;
+      transform: rotate(-8deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes validatorBgGood {
+    0% {
+      opacity: 0;
+      background-color: transparent;
+    }
+    50% {
+      opacity: 0.4;
+      background-color: green;
+    }
+    100% {
+      opacity: 0;
+      background-color: transparent;
+    }
+  }
+  @keyframes validatorBgBad {
+    0% {
+      opacity: 0;
+      background-color: transparent;
+    }
+    50% {
+      opacity: 0.4;
+      background-color: red;
+    }
+    100% {
+      opacity: 0;
+      background-color: transparent;
+    }
+  }
+
+  .validatorBackground {
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    animation-duration: 2s;
+
+    &--good {
+      animation-name: validatorBgGood;
+    }
+    &--bad {
+      animation-name: validatorBgBad;
+    }
+  }
+
+  .scoreAnimation {
+    display: inline-block;
+    position: absolute;
+    z-index: 6;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid $secondaryContrast;
+    padding: 0.4rem 0;
+    background-color: black;
+    animation-duration: 1s;
+    animation-name: patchScore;
+    top: 15%;
+    left: 10%;
+    transform: rotate(-8deg);
+
+    &__img {
+      width: 100%;
+
+      &--win {
+        margin: 0.5rem 0 0 -0.1rem;
+      }
+    }
+
+    &__message {
+      color: $primaryMain;
+      @include pxToRem(14);
+
+      &--win {
+        padding: 0 2rem;
+        margin-top: -1rem;
+      }
+
+      &--loose {
+        padding: 0 1.5rem;
+        margin-top: -0.8rem;
+        transform: rotate(-4deg);
+      }
+    }
+  }
+
+  &__theme {
+    background-color: $primaryMain;
+    color: $primaryContrast;
+    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+  }
+}
